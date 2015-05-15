@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:background="#ffc6c4be">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ABR"
+        android:id="@+id/lblAbreviatura"
+        android:layout_alignParentTop="true"
+        android:textColor="#ff696969"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/imgIconTipoTransporte"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome"
+        android:id="@+id/lblNome"
+        android:textSize="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/lblAbreviatura"
+        android:layout_toEndOf="@+id/lblAbreviatura" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgIconTipoTransporte"
+        android:src="@drawable/icon_bus"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/lblProximo"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Próximo:"
+        android:id="@+id/lblProximo"
+        android:layout_below="@+id/lblAbreviatura"
+        android:layout_alignLeft="@+id/lblAbreviatura"
+        android:layout_alignStart="@+id/lblAbreviatura"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hh:mm"
+        android:id="@+id/lblHorario"
+        android:textSize="16dp"
+        android:layout_alignBottom="@+id/lblProximo"
+        android:layout_toRightOf="@+id/lblProximo"
+        android:layout_toEndOf="@+id/lblProximo" />
+
+</RelativeLayout>

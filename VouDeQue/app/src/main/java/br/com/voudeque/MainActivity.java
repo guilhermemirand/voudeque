@@ -1,19 +1,34 @@
 package br.com.voudeque;
 
+import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
+import android.os.Handler;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import br.com.voudeque.util.LocationUtil;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends ActionBarActivity implements Runnable {
+
+    @Override
+    public void run() {
+        LocationUtil.getInstance().atualizaLocalizacao(this);
+        startActivity(new Intent(this, MapaActivity.class));
+        finish();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Handler handler = new Handler();
+        handler.postDelayed(this, 1000);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
